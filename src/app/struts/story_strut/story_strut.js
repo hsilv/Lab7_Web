@@ -44,7 +44,7 @@ export const storyStrut = (name, imgRef, audioRef, par, listArr, back, progress)
     document.body.appendChild(artic);
 
     if(listArr != undefined){
-        newStoryList(listArr, back);
+        newStoryList(listArr, undefined);
     }
 
     if(progress != undefined){
@@ -61,10 +61,6 @@ export const storyStrut = (name, imgRef, audioRef, par, listArr, back, progress)
     document.body.appendChild(ret);
 
 }
-/*var listArr = [['', 'Abogacía'], ['', 'Sicariato'], ['', 'Mecánica']];
-var title = document.createElement('h1');
-var pic = document.createElement('img');
-var paragraph = document.createElement('p');*/
 
 
 

@@ -7,7 +7,6 @@ export const newStoryList = (listArr, back) => {
         var li = document.createElement('li');
         var a = document.createElement('a');
         var b = document.createElement('b');
-        var i = document.createElement('i');
 
         a.href = element[0];
         b.innerHTML = element[1];
@@ -15,7 +14,10 @@ export const newStoryList = (listArr, back) => {
         li.appendChild(a);
         ul.appendChild(li);
     }
-    
     document.body.appendChild(ul);
-    document.body.appendChild(hRefBack);
+    if(back != undefined){
+        hRefBack.href = back;
+        hRefBack.innerHTML = 'Regresar';
+        document.body.appendChild(hRefBack);
+    }
 }
