@@ -1,0 +1,48 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+$titleColor: #333333;
+$pageColor: #F7E6DD;
+$listColor: #43B99F;
+$listHoverColor: #3E8C7B;
+body{
+    background-color: $pageColor;
+}
+.store-title{
+    display: grid;
+    justify-content: center;
+
+    h1{
+        font-weight: bold;
+        display: grid;
+        justify-items: center;
+        background-color: $titleColor;
+        color: white;
+        border-radius: 5px;
+        animation-name: titleAnimation;
+        animation-duration: 4s;
+    }
+    img{
+        border-radius: 20px;
+        animation-name: titleAnimation;
+        animation-duration: 4s;
+    }
+}
+
+@keyframes titleAnimation {
+    0% {transform: scale(0.5);}
+    100% {transform: scale(1);}
+}
+
+.list-group{
+    width: fit-content;
+    .list-group-item{
+        background-color: $listColor;
+        color: white;
+        font-weight: bold;
+    }
+    .list-group-item-action{
+        &:hover{
+            background-color: $listHoverColor;
+            font-weight: bolder;
+        }
+    }
+}
