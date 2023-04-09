@@ -1,0 +1,64 @@
+body {
+  background-color: #f6feaa;
+}
+
+header {
+  text-align: center;
+  color: #444242;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bkMetadata {
+  display: grid;
+  justify-content: center;
+}
+.bkMetadata .bkImgContainer {
+  display: grid;
+  justify-items: center;
+}
+.bkMetadata .bkImgContainer #bkImg {
+  border-radius: 20px;
+  max-height: 30vw;
+}
+.bkMetadata .bkImgContainer #bkImgCaption {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #9a8f66;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.bkDescContainer .bkDescTag {
+  background-color: #c7dfc5;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.bkDescContainer #bkSynopsis {
+  background-color: #fce694;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.bkDescContainer #bkProgLabel {
+  font-weight: bolder;
+}
+
+.bkFooter {
+  margin-top: 20px;
+}
+.bkFooter #bkBack {
+  font-size: large;
+  text-decoration: none;
+}
+.bkFooter #bkBack:hover {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=books.css.map */

@@ -1,0 +1,68 @@
+$titleColor: #444242;
+$backColor: #f6feaa;
+$autorBox: #9a8f66;
+$autorColor: white;
+$descBox: #c7dfc5;
+$synopsisBox: #fce694;
+$imgWidth: 25w;
+body {
+  background-color: $backColor;
+}
+header {
+  text-align: center;
+  color: $titleColor;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bkMetadata {
+  display: grid;
+  justify-content: center;
+  .bkImgContainer {
+    display: grid;
+    justify-items: center;
+    #bkImg {
+      border-radius: 20px;
+      max-height: 30vw;
+    }
+    #bkImgCaption {
+      padding: 20px;
+      margin-top: 10px;
+      background-color: $autorBox;
+      border-radius: 20px;
+      color: $autorColor;
+      font-weight: bold;
+    }
+  }
+}
+
+.bkDescContainer {
+  .bkDescTag {
+    background-color: $descBox;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #bkSynopsis {
+    background-color: $synopsisBox;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  #bkProgLabel {
+    font-weight: bolder;
+  }
+}
+.bkFooter {
+    margin-top: 20px;
+  #bkBack {
+    font-size: large;
+    text-decoration: none;
+    &:hover {
+      font-size: x-large;
+      text-decoration: underline;
+    }
+  }
+}
