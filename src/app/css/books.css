@@ -22,6 +22,8 @@ body {
 .bkMetadata .bkImgContainer #bkImg {
   border-radius: 20px;
   max-height: 30vw;
+  animation-name: imgAnimation;
+  animation-duration: 5s;
 }
 .bkMetadata .bkImgContainer #bkImgCaption {
   padding: 20px;
@@ -45,6 +47,11 @@ body {
   padding: 15px;
   border-radius: 10px;
 }
+.bkDescContainer #bkSynopsis:hover {
+  animation-name: synopsisAnimation;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
 .bkDescContainer #bkProgLabel {
   font-weight: bolder;
 }
@@ -59,6 +66,20 @@ body {
 .bkFooter #bkBack:hover {
   font-size: x-large;
   text-decoration: underline;
+}
+
+@keyframes imgAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes synopsisAnimation {
+  100% {
+    transform: scale(1.05);
+  }
 }
 
 /*# sourceMappingURL=books.css.map */

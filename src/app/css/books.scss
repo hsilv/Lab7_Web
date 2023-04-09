@@ -25,6 +25,8 @@ body {
     #bkImg {
       border-radius: 20px;
       max-height: 30vw;
+      animation-name: imgAnimation;
+      animation-duration: 5s;
     }
     #bkImgCaption {
       padding: 20px;
@@ -50,6 +52,11 @@ body {
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
+    &:hover{
+        animation-name: synopsisAnimation;
+        animation-duration: 4s;
+        animation-delay: 1s;
+    }
   }
   #bkProgLabel {
     font-weight: bolder;
@@ -65,4 +72,13 @@ body {
       text-decoration: underline;
     }
   }
+}
+
+@keyframes imgAnimation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes synopsisAnimation {
+    100% {transform: scale(1.05);}
 }
