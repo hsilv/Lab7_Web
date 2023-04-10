@@ -7,10 +7,22 @@ export const newStore = (title, imgRef, menu, container) => {
     var image_store = document.createElement('img');
 
     var title_menu = document.createElement('h1');
-    var list_menu = document.createElement('ol');
-    var element1_menu = document.createElement('li');
-    var element2_menu = document.createElement('li');
-    var element3_menu = document.createElement('li');
+
+    var listContainer = document.createElement('div');
+    listContainer.classList.add('list-group');
+
+    var element1_menu = document.createElement('a');
+    element1_menu.classList.add('list-group-item');
+    element1_menu.classList.add('list-group-item-action');
+
+    var element2_menu = document.createElement('a');
+    element2_menu.classList.add('list-group-item');
+    element2_menu.classList.add('list-group-item-action');
+
+    var element3_menu = document.createElement('a');
+    element3_menu.classList.add('list-group-item');
+    element3_menu.classList.add('list-group-item-action');
+
 
     about.classList.add('store-title');
     about.classList.add('store-image');
@@ -24,20 +36,16 @@ export const newStore = (title, imgRef, menu, container) => {
     image_store.src = imgRef;
     image_store.width = 300;
 
-    var list1Href = document.createElement('a');
-    list1Href.innerHTML = menu.list1Name;
-    list1Href.href = menu.list1HRef;
+    element1_menu.innerHTML = menu.list1Name;
+    element1_menu.href = menu.list1HRef;
 
-    var list2Href = document.createElement('a');
-    list2Href.innerHTML = menu.list2Name;
-    list2Href.href = menu.list2HRef;
+    element2_menu.innerHTML = menu.list2Name;
+    element2_menu.href = menu.list2HRef;
 
     var details = document.createElement('details');
     var summary = document.createElement('summary');
     var comment = document.createElement('p');
 
-    element1_menu.appendChild(list1Href);
-    element2_menu.appendChild(list2Href);
 
     summary.innerHTML = menu.summary;
     comment.innerHTML = menu.comment;
@@ -47,12 +55,12 @@ export const newStore = (title, imgRef, menu, container) => {
     element3_menu.appendChild(details);
     
 
-    list_menu.appendChild(element1_menu);
-    list_menu.appendChild(element2_menu);
-    list_menu.appendChild(element3_menu);
+    listContainer.appendChild(element1_menu);
+    listContainer.appendChild(element2_menu);
+    listContainer.appendChild(element3_menu);
 
     store_menu.appendChild(title_menu);
-    store_menu.appendChild(list_menu);
+    store_menu.appendChild(listContainer);
 
     about.appendChild(title_store);
     about.appendChild(image_store);

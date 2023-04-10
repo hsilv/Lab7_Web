@@ -36,7 +36,7 @@ export const storyStrut = (name, imgRef, audioRef, par, listArr, back, progress)
         if (element[3] != undefined || element[2] != undefined){
             var a = document.createElement('a');
             a.innerHTML = element[2];
-            a.href = element[3];
+            a.href = new URL(element[3], window.location.href).href;
             detail.appendChild(a);
         }
         artic.appendChild(detail);
@@ -57,7 +57,7 @@ export const storyStrut = (name, imgRef, audioRef, par, listArr, back, progress)
     }
 
     ret.innerHTML = 'Regresar';
-    ret.href = back;
+    ret.href = new URl(back, window.location.href).href;
     document.body.appendChild(ret);
 
 }

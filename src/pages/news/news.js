@@ -1,4 +1,6 @@
-import { newList } from "../../../src/app/struts/list_strut/list_strut.js";
+import { newList } from "../../app/struts/list_strut/list_strut.js";
+import '../../app/css/others.css';
+import '../../app/css/others.scss';
 let listArr = [['', 'Ardilla no sabe decir que no', 'Susanna Isern'],
                 ['', 'El cociente agallas', 'Mario Alonso Puig'],
                 ['', 'Las recetas de Blanca', 'Blanca García-Orea Haro'],
@@ -6,4 +8,4 @@ let listArr = [['', 'Ardilla no sabe decir que no', 'Susanna Isern'],
                 ['', 'Tratado de culinaria para mujeres tristes', 'Hector Abad Faciolince'],
                 ['../../../src/pages/story/story.html', 'Historia', 'Sebastián Silva (YO)']
             ]
-newList('Nuevos Lanzamientos en Libros', listArr, '../../../src/app/index.html');
+newList('Nuevos Lanzamientos en Libros', listArr, '../../app/index.html');

@@ -19,7 +19,7 @@ export const newList = (title, listArr, back) => {
         var b = document.createElement('b');
         var i = document.createElement('i');
 
-        a.href = element[0];
+        a.href = new URL(element[0], window.location.href).href;
         b.innerHTML = element[1] + ' - ';
         a.appendChild(b);
         i.innerHTML = element[2];
@@ -31,7 +31,7 @@ export const newList = (title, listArr, back) => {
     document.body.appendChild(ul);
     footer_h1.innerHTML = 'Menú';
     footer_a.innerHTML = 'Regresar';
-    footer_a.href = back;
+    footer_a.href = new URL(back, window.location.href).href;
     footer_li.appendChild(footer_a);
     footer_ul.appendChild(footer_li);
     footer.appendChild(footer_h1);

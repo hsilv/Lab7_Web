@@ -1,4 +1,6 @@
 import { newBook } from "../../app/struts/book_strut/book_details.js";
+import '../../app/css/books.css';
+import '../../app/css/books.scss';
 var bookArr = [
   "Encuentra a tu persona vitamina",
   "Marian Rojas Estapé",

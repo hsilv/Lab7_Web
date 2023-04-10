@@ -2,19 +2,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: {
-    index: "./src/app/index.js",
-    news: "./src/pages/news/news.js",
-    popular: "./src/pages/popular/popular.js",
-    CDAALM: './src/pages/books/CDAALM.js'
-  },
+  entry: ["./src/app/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
+    filename: "index.bundle.js",
   },
+  mode: 'development',
   resolve: {
     extensions: [".js"],
   },
@@ -32,7 +28,7 @@ module.exports = {
         use: [MiniCSSExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.jpg|.JPG|.mp3$/,
+        test: /\.jpg|.JPG$/,
         type: "asset/resource",
       },
     ],
@@ -42,21 +38,7 @@ module.exports = {
       inject: true,
       template: "./src/app/index.html",
       filename: "index.bundle.html",
-      chunks: ["index"],
-    }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "./src/pages/news/news.html",
-      filename: "news.bundle.html",
-      chunks: ["news"],
-    }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: "./src/pages/popular/popular.html",
-      filename: "popular.bundle.html",
-      chunks: ["popular"],
     }),
     new MiniCSSExtractPlugin(),
-    new CleanWebpackPlugin(),
   ],
 };
