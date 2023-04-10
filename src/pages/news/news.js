@@ -6,6 +6,6 @@ let listArr = [['', 'Ardilla no sabe decir que no', 'Susanna Isern'],
                 ['', 'Las recetas de Blanca', 'Blanca García-Orea Haro'],
                 ['', 'Serbia and The Balkan Front', 'James Lyon'],
                 ['', 'Tratado de culinaria para mujeres tristes', 'Hector Abad Faciolince'],
-                ['../../../src/pages/story/story.html', 'Historia', 'Sebastián Silva (YO)']
+                ['./story.bundle.html', 'Historia', 'Sebastián Silva (YO)']
             ]
-newList('Nuevos Lanzamientos en Libros', listArr, '../../app/index.html');
+newList('Nuevos Lanzamientos en Libros', listArr, './index.bundle.html');

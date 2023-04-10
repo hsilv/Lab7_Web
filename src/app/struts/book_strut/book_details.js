@@ -47,7 +47,7 @@ export const newBook = (bookArr) => {
     document.title = bookArr[0];     //bookArr[0] es el título del libro en el arreglo
     name.innerHTML = bookArr[0];
 
-    portrait.src = bookImg;      //bookArr[2] contiene la ruta de la imagen de la portada del libro
+    portrait.src = bookArr[2];      //bookArr[2] contiene la ruta de la imagen de la portada del libro
     portrait.alt = "Portada de Libro";
 
     imgCap.innerHTML = bookArr[0] + " - " + bookArr[1];  //bookArr[1] contiene el autor del libro 
