@@ -1,9 +1,11 @@
 "use strict";
 
+require("core-js/modules/es.object.define-property.js");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.newStore = void 0;
+require("core-js/modules/es.function.name.js");
 var newStore = function newStore(title, imgRef, menu, container) {
   var store = document.createElement('div');
   var about = document.createElement('div');
